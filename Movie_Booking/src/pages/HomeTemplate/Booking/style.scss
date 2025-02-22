@@ -1,0 +1,139 @@
+.booking-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background: #1a1a1a; // Nền đen như hình
+  color: white;
+  border-radius: 10px;
+}
+
+.movie-info {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.seat-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.screen {
+  width: 100%;
+  height: 20px;
+  background: orange;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background: #808080; // Xám (ghế chưa đặt)
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  font-size: 12px;
+}
+
+.seat-booked {
+  background: #ff0000; // Đỏ (ghế đã đặt)
+  cursor: not-allowed;
+}
+
+.seat-selected {
+  background: #00ff00; // Xanh lá (ghế đang chọn, như trong hình)
+}
+
+.seat-vip {
+  background: #ffff00; // Vàng (ghế VIP, như trong hình)
+  &:hover {
+    background: #e6e600;
+  }
+}
+
+.seat-available {
+  background: #808080; // Xám (ghế chưa đặt)
+  &:hover {
+    background: #666666;
+  }
+}
+
+.selected-seats {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.seat-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.seat-badge {
+  background: #00ff00;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.total-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.booking-button {
+  margin-top: 20px;
+}
+
+.btn-confirm {
+  background: #ff8c00; // Màu cam như nút "Xác nhận đặt vé" trong hình
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background: #e67e00;
+  }
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+.booking-status {
+  margin-top: 10px;
+  text-align: center;
+  &.text-green-500 {
+    color: #00ff00;
+  }
+  &.text-red-500 {
+    color: #ff0000;
+  }
+}
+
+.legend {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
